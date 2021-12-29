@@ -5,26 +5,30 @@
         <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT1qObOOdayPTpmwFZWOCtM5vwskzRjE1R_RHWaaRZ-8a3XYmG4XL7qL3cNm0lGPExA4SQ&usqp=CAU" 
         id="icon"  />
       </div>
-      <form>
+      <form [formGroup]="signupForm" (ngSubmit)="signup()">
         <input 
+          formControlName="firstname"
           type="text" 
           class="form-control" 
           placeholder="First Name" 
           class="fadeIn second" 
         >
         <input 
+        formControlName="lastname"
           type="text" 
           class="form-control" 
           placeholder="Last Name" 
           class="fadeIn second" 
         >
         <input 
+        formControlName="email"
           type="text" 
           class="form-control" 
           placeholder="Email" 
           class="fadeIn second" 
         >
         <input 
+        formControlName="password"
           type="password" 
           class="form-control"  
           class="fadeIn second" 
